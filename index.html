@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FC Tuborg</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+
+</head>
+
+<body>
+
+
+    <!-- Log in forside -->
+    <section id="frontLogin">
+        <h1>FC Tuborg</h1>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <input id="txtEmail" class="input form-control" type="email" placeholder="Email">
+                <br>
+                <br>
+                <input id="txtPassword" class="input form-control" type="password" placeholder="Password">
+                <br>
+                <br>
+            </div>
+        </div>
+        <button id="btnLogin" class="btn btn-primary" onclick="loginFirebase()">Login</button>
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#regModal" data-whatever="">Sign Up</button>
+    </section>
+
+
+
+
+
+
+    <!-- Modal popup -->
+    <section class="modal fade" id="regModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label class="col-form-label">Email:</label>
+                            <input id="regEmail" type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label">Password:</label>
+                            <input id="regKode" type="password" class="form-control">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    <button onclick="signUpFirebase()" type="button" class="btn btn-primary">Sign Up</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+<!-- Container -->
+    <section id="container">
+        <h1>Oversigt</h1>
+        <div class="row">
+            <div class="col-md-12">
+                <ul id="messages" class="list-group">
+                    <!-- Her bliver messages tilføjet -->
+                </ul>
+            </div>
+            <div class="col-md-12">
+                <form method="post" name="contactForm">
+                    <div class="form-group">
+                        <label for="titel">Titel</label>
+                        <input type="text" class="form-control" id="titel" required value="Fodboldtræning">
+                    </div>
+                    <div class="form-group">
+                        <label for="tidsp">Tidspunkt</label>
+                        <input type="email" class="form-control" id="tidsp" required placeholder="Tidspunkt">
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="lokation">Lokation</label>
+                        <input type="text" class="form-control" id="lokation" placeholder="Lokation">
+                    </div>
+                    <button type="submit" class="btn btn-primary opret">Opret</button>
+                    <button id="btnLogout" class="btn btn-primary" onclick="logOut()">Logout</button>
+                </form>
+            </div>
+
+        </div>
+
+    </section>
+
+    
+    
+    <script src="bundle.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Latest compiled and minified Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Include Firebase Library -->
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
